@@ -3,7 +3,7 @@
 class Widget
 {
 public:
-    void Begin();
+    void SetUp();
     void Draw();
     void Update();
 

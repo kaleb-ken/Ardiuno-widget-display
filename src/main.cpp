@@ -4,7 +4,7 @@
 Display display;
 
 void setup() {
-  display.Begin();
+  display.SetUp();
   
 }
 

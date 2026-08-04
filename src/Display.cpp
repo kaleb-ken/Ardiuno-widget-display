@@ -7,7 +7,7 @@ MCUFRIEND_kbv tft;
 #define PURPLE 0xf00f
 #define BLACK 0x0000
 
-void Display::Begin()
+void Display::SetUp()
 {
     uint16_t ID = tft.readID();
     tft.begin(ID);

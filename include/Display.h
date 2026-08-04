@@ -3,7 +3,7 @@
 class Display 
 {
 public:
-    void Begin();
+    void SetUp();
     void Clear();
     void DrawTitle(const String& title);
     void DrawButton(
