@@ -1,13 +1,17 @@
 #include <Arduino.h>
-#include "Display.h"
+#include "ScreenText.h"
+#include "Tamagotchi.h"
+#include "Global.h"
 
-Display display;
+MCUFRIEND_kbv tft;
+ScreenText display;
+Tamagotchi bob;
 
 void setup() {
   display.SetUp();
   display.DrawTitle("Bob");
-  display.DrawImage(100,100,"Bob.bmp");
-   Serial.println("poooo");
+  bob.SetUp();
+  Serial.println("poooo");
 }
 
 void loop() {

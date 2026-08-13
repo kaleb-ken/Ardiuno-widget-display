@@ -1,6 +1,6 @@
 #include <Arduino.h>
 
-class Display 
+class ScreenText 
 {
 public:
     void SetUp();
@@ -9,14 +9,11 @@ public:
     // void DrawButton(
     //     int x, int y,
     //     int height, int width,
-    //     const String& label);
-    // void DrawText(
-    //     int x, int y,
-    //     const String& text
+    //     const String& label
     // );
-    void DrawImage(
+    void DrawText(
         int x, int y,
-        const char *FileName
+        const String& text
     );
 private:
     //static int GetCenter();
