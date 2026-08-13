@@ -7,21 +7,22 @@
 
 
 #define BUFFPIXEL 20
-#define SD_CS 5
+#define SD_CS 10
 
 File root;
-char namebuf[32] = "Bob.bmp";
+char namebuf[32] = "Terry.bmp";
 int pathlen;
 uint8_t         spi_save;
 
 void Tamagotchi::SetUp()
 {
-    uint16_t ID;
+    uint16_t ID = tft.readID();
     Serial.begin(9600);
     Serial.print("Show BMP files on TFT with ID:0x");
-    ID = tft.readID();
     Serial.println(ID, HEX);
     if (ID == 0x0D3D3) ID = 0x9481;
+    pinMode(10, OUTPUT); // adjust to your actual TFT CS pin if different
+    digitalWrite(10, HIGH);
     
     bool good = SD.begin(SD_CS);
     if (!good) {
@@ -29,7 +30,7 @@ void Tamagotchi::SetUp()
         while (1);
     }
 
-    DrawCharacter( 0, 0, "Bob.bmp");
+    DrawCharacter( 0, 0, "Terry.bmp");
 }
 
 void Tamagotchi::DrawCharacter(int x, int y, const char*fileName)
