@@ -7,7 +7,7 @@
 
 MCUFRIEND_kbv tft;
 ScreenText display;
-Tamagotchi bob;
+Tamagotchi Terry;
 
 void setup() {
    Serial.begin(9600);
@@ -18,10 +18,9 @@ void setup() {
     return;
   }
   Serial.println("done.");
-  // display.SetUp();
-  // display.DrawTitle("Bob");
-  // bob.SetUp();
-  // Serial.println("poooo");
+  display.SetUp();
+  display.DrawTitle("Terry");
+  Terry.SetUp();
 }
 
 void loop() {

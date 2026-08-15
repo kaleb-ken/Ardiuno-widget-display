@@ -22,12 +22,15 @@ void ScreenText::SetUp()
     // Screen is orientated landscape
     SCREEN_W = tft.width();
     SCREEN_H = tft.height();
+    Serial.print(SCREEN_H);
+    Serial.print("x");
+    Serial.print(SCREEN_W);
 }
 
 void ScreenText::DrawTitle(const String& title)
 {
     int y = 10;
-    int padding = 4;
+    int padding = 6;
     
     tft.setTextSize(3);
     tft.setTextColor(BLACK);

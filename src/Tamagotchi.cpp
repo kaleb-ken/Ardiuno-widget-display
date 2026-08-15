@@ -30,7 +30,7 @@ void Tamagotchi::SetUp()
         while (1);
     }
 
-    DrawCharacter( 0, 0, "Terry.bmp");
+    DrawCharacter( 60, 100, "Terry1.bmp");
 }
 
 void Tamagotchi::DrawCharacter(int x, int y, const char*fileName)
