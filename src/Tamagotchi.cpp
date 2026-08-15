@@ -29,8 +29,6 @@ void Tamagotchi::SetUp()
         Serial.print(F("cannot start SD"));
         while (1);
     }
-
-    DrawCharacter( 60, 100, "Terry1.bmp");
 }
 
 void Tamagotchi::DrawCharacter(int x, int y, const char*fileName)

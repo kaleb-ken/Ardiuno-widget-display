@@ -6,15 +6,18 @@ public:
     void SetUp();
     void Clear();
     void DrawTitle(const String& title);
-    // void DrawButton(
-    //     int x, int y,
-    //     int height, int width,
-    //     const String& label
-    // );
+    void DrawButton(
+        int x, int y,
+        int height, int width,
+        const String& label
+    );
     void DrawText(
         int x, int y,
         const String& text
     );
 private:
-    //static int GetCenter();
+    static int GetObjectCenter(
+        int objX, int objY,
+        int objW, int objH
+    );
 };
